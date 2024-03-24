@@ -2,7 +2,7 @@
 #define NEURON_H
 
 #include "edge.h"
-#include "../misc/functions.h"
+#include "functions.h"
 #include "layer.h"
 #include "activation_function.h"
 

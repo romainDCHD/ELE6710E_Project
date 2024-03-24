@@ -1,4 +1,4 @@
-#include "Backpropagation.h"
+#include "backpropagation.h"
 
 
 void Backpropagation::setLearningRate(double lr)

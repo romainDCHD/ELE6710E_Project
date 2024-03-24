@@ -2,7 +2,7 @@
 
 #include <fstream>
 #include <algorithm>
-#include "../misc/functions.h"
+#include "functions.h"
 
 Dataset::Dataset(string filename)
 {

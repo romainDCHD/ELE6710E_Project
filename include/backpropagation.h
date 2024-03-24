@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../misc/functions.h"
-#include "../neural/neuralnetwork.h"
-#include "../dataset/dataset.h"
+#include "functions.h"
+#include "neuralnetwork.h"
+#include "dataset.h"
 #include "optimizer.h"
 #include <unordered_map>
 

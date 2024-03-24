@@ -1,9 +1,9 @@
 #ifndef NEURALNETWORK_H
 #define NEURALNETWORK_H
 
-#include "../misc/functions.h"
+#include "functions.h"
 #include "layer.h"
-#include "../dataset/dataset.h"
+#include "dataset.h"
 #include <unordered_map>
 
 #define RAND_MAX_WEIGHT 1

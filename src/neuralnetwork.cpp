@@ -1,6 +1,6 @@
 #include "neuralnetwork.h"
 #include "neuron.h"
-#include "../misc/functions.h"
+#include "functions.h"
 
 
 NeuralNetwork::NeuralNetwork()
@@ -161,11 +161,11 @@ double NeuralNetwork::predictAllForScore(const Dataset& dataset, Datatype d,  in
 		return 1;
 	double s = 0;
 
-	//Sans limite explicite, on score toutes les données
+	//Sans limite explicite, on score toutes les donnï¿½es
 	if (limit == -1)
 		for (size_t i = 0; i < dataset.getIns(d).size(); i++)
 			s += distanceVector(predict(*dataset.getIns(d)[i]), *dataset.getOuts(d)[i]);
-	//Sinon on prend "limit" données
+	//Sinon on prend "limit" donnï¿½es
 	else
 		for (int i = 0; i < limit; i++)
 		{

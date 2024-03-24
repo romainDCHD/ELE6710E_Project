@@ -1,19 +1,24 @@
 CXX = g++
-CXXFLAGS = -Wall -std=c++11
-LDFLAGS = 
-EXEC = main
-SOURCES = $(wildcard src/*.cpp) $(wildcard src/dataset/*.cpp) $(wildcard src/misc/*.cpp) $(wildcard src/neural/*.cpp) $(wildcard src/optimizer/*.cpp)
-OBJECTS = $(SOURCES:.cpp=.o)
+CXXFLAGS = -Wall -std=c++11 -Iinclude
+LDFLAGS = -lpthread
+EXEC = build/bin/neuralnetwork
+SOURCES = $(wildcard src/*.cpp)
+OBJECTS = $(addprefix build/, $(notdir $(SOURCES:.cpp=.o)))
+DIRS = build build/bin
 
-all: $(EXEC)
+all: dirs $(EXEC)
+
+dirs:
+	mkdir -p $(DIRS)
 
 $(EXEC): $(OBJECTS)
 	$(CXX) $(OBJECTS) -o $(EXEC) $(LDFLAGS)
 
-%.o: %.cpp
+build/%.o: src/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(EXEC) $(OBJECTS)
+	rm -rf $(DIRS)
 
-.PHONY: all clean
+.PHONY: all clean dirs

@@ -1,9 +1,9 @@
 
-#include "neural/neuralnetwork.h"
-#include "misc/functions.h"
-#include "optimizer/backpropagation.h"
-#include "optimizer/shakingtree.h"
-#include "dataset/dataset.h"
+#include "neuralnetwork.h"
+#include "functions.h"
+#include "backpropagation.h"
+#include "shakingtree.h"
+#include "dataset.h"
 
 #include <ctime>
 #include <numeric>

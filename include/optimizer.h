@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../dataset/dataset.h"
-#include "../neural/neuralnetwork.h"
+#include "dataset.h"
+#include "neuralnetwork.h"
 
 
 class Optimizer
